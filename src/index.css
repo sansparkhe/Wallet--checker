@@ -1,13 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafb; /* Light gray background */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
 }
+
+.w-full {
+  max-width: 800px; /* Max width for content */
+  width: 100%; /* Full width on smaller screens */
+}
+
+.bg-white {
+  background-color: white; /* White background for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.p-6 {
+  padding: 24px; /* Padding for the inner elements */
+}
+
+.text-xl {
+  font-size: 1.5rem; /* Large font size for headings */
+  color: #333; /* Dark gray color */
+}
+
+.bg-gray-50 {
+  background-color: #f3f4f6; /* Light gray background for sections */
+}
+
+.rounded-lg {
+  border-radius: 8px; /* Rounded corners for buttons and sections */
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: #1e40af; /* Darker blue on hover */
+}
+
+.hover\:bg-red-700:hover {
+  background-color: #9b2c2c; /* Darker red on hover */
+}
+
+.text-gray-500 {
+  color: #6b7280; /* Medium gray for texts */
+}
+
+.font-mono {
+  font-family: 'Courier New', monospace; /* Monospace font for addresses */
+}
+
+.transition-colors {
+  transition: background-color 0.2s; /* Smooth background transition */
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem; /* Space between elements in vertical layout */
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr); /* Two columns grid layout */
+}
+
+.gap-4 > * {
+  margin: 1rem; /* Gap between grid items */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* Smaller font size */
+}
+
+.font-medium {
+  font-weight: 500; /* Medium font weight for emphasis */
+}
+
+.flex {
+  display: flex; /* Flexbox for layout */
+}
+
+.justify-between {
+  justify-content: space-between; /* Space between flex items */
+}
+
+.items-center {
+  align-items: center; /* Center alignment for flex items */
+}
+
+/* Additional styles for buttons */
+.bg-blue-600 {
+  background-color: #3b82f6; /* Blue background for button */
+}
+
+.bg-red-600 {
+  background-color: #ef4444; /* Red background for button */
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .text-xl {
+      font-size: 1.25rem; /* Smaller font size on mobile */
+  }
+}
+
